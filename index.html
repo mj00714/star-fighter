@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Star Fighter</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 100%; height: 100%; background: #02030a; overflow: hidden;
+    font-family: 'Courier New', monospace; user-select: none; -webkit-user-select: none;
+  }
+  /* fixed-size stage, scaled to the window by game.js (preserves aspect) */
+  #stage {
+    position: absolute; left: 50%; top: 50%;
+    width: 960px; height: 540px; transform-origin: center center;
+    box-shadow: 0 0 60px rgba(60,90,200,0.35);
+  }
+  #stage canvas { position: absolute; left: 0; top: 0; width: 960px; height: 540px; }
+  /* backing stores are matched to device pixels by game.js → smooth sampling */
+  #gl  { image-rendering: auto; }
+  #hud { pointer-events: none; }
+  #hint {
+    position: absolute; bottom: 8px; left: 0; width: 100%; text-align: center;
+    color: #2c3c4f; font-size: 11px; letter-spacing: 2px;
+  }
+</style>
+</head>
+<body>
+  <div id="stage">
+    <canvas id="gl"></canvas>
+    <canvas id="hud"></canvas>
+  </div>
+  <div id="hint">STAR FIGHTER · iteration 1 · click once if the controller isn't detected</div>
+
+  <!-- vendored engine (offline) -->
+  <script src="lib/three.min.js"></script>
+  <!-- game systems, in dependency order -->
+  <script src="src/config.js"></script>
+  <script src="src/input.js"></script>
+  <script src="src/flight.js"></script>
+  <script src="src/weapons.js"></script>
+  <script src="src/world.js"></script>
+  <script src="src/ai.js"></script>
+  <script src="src/cockpit.js"></script>
+  <script src="src/navmap.js"></script>
+  <script src="src/missions.js"></script>
+  <script src="src/diag.js"></script>
+  <script src="src/sound.js"></script>
+  <script src="src/game.js"></script>
+</body>
+</html>
