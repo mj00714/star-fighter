@@ -4,6 +4,17 @@ A 3D cockpit space-fighter in the spirit of X-Wing / Star Fox. WebGL (Three.js)
 styled down to a 16/32-bit look, with a flight-sim-flavored arcade-hybrid flight
 model and a 3D nav bubble. Built iteratively.
 
+**▶ Play it in your browser:** https://mj00714.github.io/star-fighter/
+
+## Screenshots
+
+| | |
+|---|---|
+| ![Mission select](screenshots/01-mission-select.png) | ![Cockpit HUD](screenshots/02-cockpit-plasma.png) |
+| *Mission select — free flight + three launch ops* | *Cockpit view — HUD, pitch ladder, nav bubble* |
+| ![Chase view](screenshots/03-chase-view.png) | ![Far chase with target lock](screenshots/04-far-chase.png) |
+| *Chase view — banking through the asteroid field* | *Far chase — target lock at 3.9 km* |
+
 ## Run it
 
 Just open `index.html` in a browser — Three.js is vendored locally and the game
